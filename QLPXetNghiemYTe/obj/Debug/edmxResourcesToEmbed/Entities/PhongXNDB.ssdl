@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLPXetNghiemYTModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BenhNhan">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HoTen" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="SN" Type="date" Nullable="false" />
+    <Property Name="DiaChi" Type="nchar" MaxLength="200" Nullable="false" />
+    <Property Name="SDT" Type="char" MaxLength="11" Nullable="false" />
+    <Property Name="Email" Type="nchar" MaxLength="100" />
+    <Property Name="CMND" Type="nchar" MaxLength="12" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ChucVu">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ChucVu" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HoSoBN">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BNID" Type="int" Nullable="false" />
+    <Property Name="NgayTao" Type="datetime" Nullable="false" />
+    <Property Name="TrangThaiThanhToan" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HoSoXNBN">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HoSoBNID" Type="int" Nullable="false" />
+    <Property Name="XNID" Type="int" Nullable="false" />
+    <Property Name="KetQua" Type="float" />
+    <Property Name="ModifiedBy" Type="int" Nullable="false" />
+    <Property Name="NgayXN" Type="datetime" />
+  </EntityType>
+  <EntityType Name="LoaiXN">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenLoaiXN" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MoTa" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="NhanVien">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HoTen" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="SN" Type="date" Nullable="false" />
+    <Property Name="SDT" Type="char" MaxLength="11" Nullable="false" />
+    <Property Name="PhongBanID" Type="int" Nullable="false" />
+    <Property Name="ChucVuID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PhongBan">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenPB" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="XetNghiem">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenXn" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="TriSoBTNamMin" Type="float" Nullable="false" />
+    <Property Name="TriSoBTNuMin" Type="float" Nullable="false" />
+    <Property Name="DonVi" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="DonGia" Type="int" Nullable="false" />
+    <Property Name="LoaiXNID" Type="int" Nullable="false" />
+    <Property Name="TriSoBTNamMax" Type="float" Nullable="false" />
+    <Property Name="TriSoBTNuMax" Type="float" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_HoSoBN_BenhNhan">
+    <End Role="BenhNhan" Type="Self.BenhNhan" Multiplicity="1" />
+    <End Role="HoSoBN" Type="Self.HoSoBN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BenhNhan">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="HoSoBN">
+        <PropertyRef Name="BNID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HoSoXNBN_HoSoBN">
+    <End Role="HoSoBN" Type="Self.HoSoBN" Multiplicity="1" />
+    <End Role="HoSoXNBN" Type="Self.HoSoXNBN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HoSoBN">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="HoSoXNBN">
+        <PropertyRef Name="HoSoBNID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HoSoXNBN_NhanVien">
+    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="1" />
+    <End Role="HoSoXNBN" Type="Self.HoSoXNBN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhanVien">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="HoSoXNBN">
+        <PropertyRef Name="ModifiedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HoSoXNBN_XetNghiem">
+    <End Role="XetNghiem" Type="Self.XetNghiem" Multiplicity="1" />
+    <End Role="HoSoXNBN" Type="Self.HoSoXNBN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="XetNghiem">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="HoSoXNBN">
+        <PropertyRef Name="XNID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NhanVien_ChucVu">
+    <End Role="ChucVu" Type="Self.ChucVu" Multiplicity="1" />
+    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ChucVu">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="NhanVien">
+        <PropertyRef Name="ChucVuID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NhanVien_PhongBan">
+    <End Role="PhongBan" Type="Self.PhongBan" Multiplicity="1" />
+    <End Role="NhanVien" Type="Self.NhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PhongBan">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="NhanVien">
+        <PropertyRef Name="PhongBanID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_XetNghiem_LoaiXN">
+    <End Role="LoaiXN" Type="Self.LoaiXN" Multiplicity="1" />
+    <End Role="XetNghiem" Type="Self.XetNghiem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LoaiXN">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="XetNghiem">
+        <PropertyRef Name="LoaiXNID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="GetBNinHD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="XNID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetDonGiaXNinHSBN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDHSBN" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetKQXN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="HSBNID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetXNinHSXN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="HSBNID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="UpdateStatusHSBN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="HSBNID" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="QLPXetNghiemYTModelStoreContainer">
+    <EntitySet Name="BenhNhan" EntityType="Self.BenhNhan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ChucVu" EntityType="Self.ChucVu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HoSoBN" EntityType="Self.HoSoBN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HoSoXNBN" EntityType="Self.HoSoXNBN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoaiXN" EntityType="Self.LoaiXN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NhanVien" EntityType="Self.NhanVien" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PhongBan" EntityType="Self.PhongBan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="XetNghiem" EntityType="Self.XetNghiem" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_HoSoBN_BenhNhan" Association="Self.FK_HoSoBN_BenhNhan">
+      <End Role="BenhNhan" EntitySet="BenhNhan" />
+      <End Role="HoSoBN" EntitySet="HoSoBN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HoSoXNBN_HoSoBN" Association="Self.FK_HoSoXNBN_HoSoBN">
+      <End Role="HoSoBN" EntitySet="HoSoBN" />
+      <End Role="HoSoXNBN" EntitySet="HoSoXNBN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HoSoXNBN_NhanVien" Association="Self.FK_HoSoXNBN_NhanVien">
+      <End Role="NhanVien" EntitySet="NhanVien" />
+      <End Role="HoSoXNBN" EntitySet="HoSoXNBN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HoSoXNBN_XetNghiem" Association="Self.FK_HoSoXNBN_XetNghiem">
+      <End Role="XetNghiem" EntitySet="XetNghiem" />
+      <End Role="HoSoXNBN" EntitySet="HoSoXNBN" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NhanVien_ChucVu" Association="Self.FK_NhanVien_ChucVu">
+      <End Role="ChucVu" EntitySet="ChucVu" />
+      <End Role="NhanVien" EntitySet="NhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NhanVien_PhongBan" Association="Self.FK_NhanVien_PhongBan">
+      <End Role="PhongBan" EntitySet="PhongBan" />
+      <End Role="NhanVien" EntitySet="NhanVien" />
+    </AssociationSet>
+    <AssociationSet Name="FK_XetNghiem_LoaiXN" Association="Self.FK_XetNghiem_LoaiXN">
+      <End Role="LoaiXN" EntitySet="LoaiXN" />
+      <End Role="XetNghiem" EntitySet="XetNghiem" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

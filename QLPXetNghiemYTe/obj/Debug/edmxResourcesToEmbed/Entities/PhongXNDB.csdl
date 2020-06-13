@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLPXetNghiemYTModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="QLPXetNghiemYTEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="GetBNinHD" ReturnType="Collection(QLPXetNghiemYTModel.GetBNinHD_Result)">
+      <Parameter Name="XNID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetDonGiaXNinHSBN" ReturnType="Collection(QLPXetNghiemYTModel.GetDonGiaXNinHSBN_Result)">
+      <Parameter Name="IDHSBN" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetKQXN" ReturnType="Collection(QLPXetNghiemYTModel.GetKQXN_Result)">
+      <Parameter Name="HSBNID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetXNinHSXN" ReturnType="Collection(QLPXetNghiemYTModel.GetXNinHSXN_Result)">
+      <Parameter Name="HSBNID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(QLPXetNghiemYTModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <EntitySet Name="BenhNhans" EntityType="QLPXetNghiemYTModel.BenhNhan" />
+    <EntitySet Name="ChucVus" EntityType="QLPXetNghiemYTModel.ChucVu" />
+    <EntitySet Name="HoSoBNs" EntityType="QLPXetNghiemYTModel.HoSoBN" />
+    <EntitySet Name="HoSoXNBNs" EntityType="QLPXetNghiemYTModel.HoSoXNBN" />
+    <EntitySet Name="LoaiXNs" EntityType="QLPXetNghiemYTModel.LoaiXN" />
+    <EntitySet Name="NhanViens" EntityType="QLPXetNghiemYTModel.NhanVien" />
+    <EntitySet Name="PhongBans" EntityType="QLPXetNghiemYTModel.PhongBan" />
+    <EntitySet Name="sysdiagrams" EntityType="QLPXetNghiemYTModel.sysdiagram" />
+    <EntitySet Name="XetNghiems" EntityType="QLPXetNghiemYTModel.XetNghiem" />
+    <AssociationSet Name="FK_HoSoBN_BenhNhan" Association="QLPXetNghiemYTModel.FK_HoSoBN_BenhNhan">
+      <End Role="BenhNhan" EntitySet="BenhNhans" />
+      <End Role="HoSoBN" EntitySet="HoSoBNs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NhanVien_ChucVu" Association="QLPXetNghiemYTModel.FK_NhanVien_ChucVu">
+      <End Role="ChucVu" EntitySet="ChucVus" />
+      <End Role="NhanVien" EntitySet="NhanViens" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HoSoXNBN_HoSoBN" Association="QLPXetNghiemYTModel.FK_HoSoXNBN_HoSoBN">
+      <End Role="HoSoBN" EntitySet="HoSoBNs" />
+      <End Role="HoSoXNBN" EntitySet="HoSoXNBNs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HoSoXNBN_NhanVien" Association="QLPXetNghiemYTModel.FK_HoSoXNBN_NhanVien">
+      <End Role="NhanVien" EntitySet="NhanViens" />
+      <End Role="HoSoXNBN" EntitySet="HoSoXNBNs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HoSoXNBN_XetNghiem" Association="QLPXetNghiemYTModel.FK_HoSoXNBN_XetNghiem">
+      <End Role="XetNghiem" EntitySet="XetNghiems" />
+      <End Role="HoSoXNBN" EntitySet="HoSoXNBNs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_XetNghiem_LoaiXN" Association="QLPXetNghiemYTModel.FK_XetNghiem_LoaiXN">
+      <End Role="LoaiXN" EntitySet="LoaiXNs" />
+      <End Role="XetNghiem" EntitySet="XetNghiems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NhanVien_PhongBan" Association="QLPXetNghiemYTModel.FK_NhanVien_PhongBan">
+      <End Role="PhongBan" EntitySet="PhongBans" />
+      <End Role="NhanVien" EntitySet="NhanViens" />
+    </AssociationSet>
+    <FunctionImport Name="UpdateStatusHSBN">
+      <Parameter Name="HSBNID" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="GetBNinHD_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="HoTen" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="SN" Nullable="false" />
+    <Property Type="String" Name="DiaChi" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="SDT" Nullable="false" MaxLength="11" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="CMND" Nullable="false" MaxLength="12" />
+  </ComplexType>
+  <ComplexType Name="GetDonGiaXNinHSBN_Result">
+    <Property Type="String" Name="TenXn" Nullable="false" MaxLength="200" />
+    <Property Type="Int32" Name="DonGia" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="GetKQXN_Result">
+    <Property Type="String" Name="TenXn" Nullable="false" MaxLength="200" />
+    <Property Type="Double" Name="TriSoBTNamMin" Nullable="false" />
+    <Property Type="Double" Name="TriSoBTNamMax" Nullable="false" />
+    <Property Type="Double" Name="TriSoBTNuMin" Nullable="false" />
+    <Property Type="Double" Name="TriSoBTNuMax" Nullable="false" />
+    <Property Type="String" Name="DonVi" Nullable="false" MaxLength="20" />
+    <Property Type="Double" Name="KetQua" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetXNinHSXN_Result">
+    <Property Type="String" Name="TenXn" Nullable="false" MaxLength="200" />
+    <Property Type="Double" Name="TriSoBTNamMin" Nullable="false" />
+    <Property Type="Double" Name="TriSoBTNamMax" Nullable="false" />
+    <Property Type="Double" Name="TriSoBTNuMin" Nullable="false" />
+    <Property Type="Double" Name="TriSoBTNuMax" Nullable="false" />
+    <Property Type="String" Name="DonVi" Nullable="false" MaxLength="20" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+  <EntityType Name="BenhNhan">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HoTen" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SN" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="DiaChi" Type="String" Nullable="false" MaxLength="200" FixedLength="true" Unicode="true" />
+    <Property Name="SDT" Type="String" Nullable="false" MaxLength="11" FixedLength="true" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="CMND" Type="String" Nullable="false" MaxLength="12" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="HoSoBNs" Relationship="QLPXetNghiemYTModel.FK_HoSoBN_BenhNhan" FromRole="BenhNhan" ToRole="HoSoBN" />
+  </EntityType>
+  <EntityType Name="ChucVu">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ChucVu1" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="NhanViens" Relationship="QLPXetNghiemYTModel.FK_NhanVien_ChucVu" FromRole="ChucVu" ToRole="NhanVien" />
+  </EntityType>
+  <EntityType Name="HoSoBN">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BNID" Type="Int32" Nullable="false" />
+    <Property Name="NgayTao" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="TrangThaiThanhToan" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="BenhNhan" Relationship="QLPXetNghiemYTModel.FK_HoSoBN_BenhNhan" FromRole="HoSoBN" ToRole="BenhNhan" />
+    <NavigationProperty Name="HoSoXNBNs" Relationship="QLPXetNghiemYTModel.FK_HoSoXNBN_HoSoBN" FromRole="HoSoBN" ToRole="HoSoXNBN" />
+  </EntityType>
+  <EntityType Name="HoSoXNBN">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HoSoBNID" Type="Int32" Nullable="false" />
+    <Property Name="XNID" Type="Int32" Nullable="false" />
+    <Property Name="KetQua" Type="Double" />
+    <Property Name="ModifiedBy" Type="Int32" Nullable="false" />
+    <Property Name="NgayXN" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="HoSoBN" Relationship="QLPXetNghiemYTModel.FK_HoSoXNBN_HoSoBN" FromRole="HoSoXNBN" ToRole="HoSoBN" />
+    <NavigationProperty Name="NhanVien" Relationship="QLPXetNghiemYTModel.FK_HoSoXNBN_NhanVien" FromRole="HoSoXNBN" ToRole="NhanVien" />
+    <NavigationProperty Name="XetNghiem" Relationship="QLPXetNghiemYTModel.FK_HoSoXNBN_XetNghiem" FromRole="HoSoXNBN" ToRole="XetNghiem" />
+  </EntityType>
+  <EntityType Name="LoaiXN">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenLoaiXN" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MoTa" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="XetNghiems" Relationship="QLPXetNghiemYTModel.FK_XetNghiem_LoaiXN" FromRole="LoaiXN" ToRole="XetNghiem" />
+  </EntityType>
+  <EntityType Name="NhanVien">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HoTen" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SN" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="SDT" Type="String" Nullable="false" MaxLength="11" FixedLength="true" Unicode="false" />
+    <Property Name="PhongBanID" Type="Int32" Nullable="false" />
+    <Property Name="ChucVuID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ChucVu" Relationship="QLPXetNghiemYTModel.FK_NhanVien_ChucVu" FromRole="NhanVien" ToRole="ChucVu" />
+    <NavigationProperty Name="HoSoXNBNs" Relationship="QLPXetNghiemYTModel.FK_HoSoXNBN_NhanVien" FromRole="NhanVien" ToRole="HoSoXNBN" />
+    <NavigationProperty Name="PhongBan" Relationship="QLPXetNghiemYTModel.FK_NhanVien_PhongBan" FromRole="NhanVien" ToRole="PhongBan" />
+  </EntityType>
+  <EntityType Name="PhongBan">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenPB" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="NhanViens" Relationship="QLPXetNghiemYTModel.FK_NhanVien_PhongBan" FromRole="PhongBan" ToRole="NhanVien" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="XetNghiem">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenXn" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="TriSoBTNamMin" Type="Double" Nullable="false" />
+    <Property Name="TriSoBTNuMin" Type="Double" Nullable="false" />
+    <Property Name="DonVi" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="DonGia" Type="Int32" Nullable="false" />
+    <Property Name="LoaiXNID" Type="Int32" Nullable="false" />
+    <Property Name="TriSoBTNamMax" Type="Double" Nullable="false" />
+    <Property Name="TriSoBTNuMax" Type="Double" Nullable="false" />
+    <NavigationProperty Name="HoSoXNBNs" Relationship="QLPXetNghiemYTModel.FK_HoSoXNBN_XetNghiem" FromRole="XetNghiem" ToRole="HoSoXNBN" />
+    <NavigationProperty Name="LoaiXN" Relationship="QLPXetNghiemYTModel.FK_XetNghiem_LoaiXN" FromRole="XetNghiem" ToRole="LoaiXN" />
+  </EntityType>
+  <Association Name="FK_HoSoBN_BenhNhan">
+    <End Type="QLPXetNghiemYTModel.BenhNhan" Role="BenhNhan" Multiplicity="1" />
+    <End Type="QLPXetNghiemYTModel.HoSoBN" Role="HoSoBN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BenhNhan">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="HoSoBN">
+        <PropertyRef Name="BNID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NhanVien_ChucVu">
+    <End Type="QLPXetNghiemYTModel.ChucVu" Role="ChucVu" Multiplicity="1" />
+    <End Type="QLPXetNghiemYTModel.NhanVien" Role="NhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ChucVu">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="NhanVien">
+        <PropertyRef Name="ChucVuID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HoSoXNBN_HoSoBN">
+    <End Type="QLPXetNghiemYTModel.HoSoBN" Role="HoSoBN" Multiplicity="1" />
+    <End Type="QLPXetNghiemYTModel.HoSoXNBN" Role="HoSoXNBN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HoSoBN">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="HoSoXNBN">
+        <PropertyRef Name="HoSoBNID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HoSoXNBN_NhanVien">
+    <End Type="QLPXetNghiemYTModel.NhanVien" Role="NhanVien" Multiplicity="1" />
+    <End Type="QLPXetNghiemYTModel.HoSoXNBN" Role="HoSoXNBN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhanVien">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="HoSoXNBN">
+        <PropertyRef Name="ModifiedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HoSoXNBN_XetNghiem">
+    <End Type="QLPXetNghiemYTModel.XetNghiem" Role="XetNghiem" Multiplicity="1" />
+    <End Type="QLPXetNghiemYTModel.HoSoXNBN" Role="HoSoXNBN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="XetNghiem">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="HoSoXNBN">
+        <PropertyRef Name="XNID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_XetNghiem_LoaiXN">
+    <End Type="QLPXetNghiemYTModel.LoaiXN" Role="LoaiXN" Multiplicity="1" />
+    <End Type="QLPXetNghiemYTModel.XetNghiem" Role="XetNghiem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LoaiXN">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="XetNghiem">
+        <PropertyRef Name="LoaiXNID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NhanVien_PhongBan">
+    <End Type="QLPXetNghiemYTModel.PhongBan" Role="PhongBan" Multiplicity="1" />
+    <End Type="QLPXetNghiemYTModel.NhanVien" Role="NhanVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PhongBan">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="NhanVien">
+        <PropertyRef Name="PhongBanID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
