@@ -5,15 +5,15 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="4ac6f7d3ce204841a5d7fdcb8cd4bc5f" Name="Diagram1">
-        <EntityTypeShape EntityType="QLPXetNghiemYTModel.BenhNhan" Width="1.5" PointX="0.75" PointY="12.125" />
+        <EntityTypeShape EntityType="QLPXetNghiemYTModel.BenhNhan" Width="1.5" PointX="0.75" PointY="8.25" />
         <EntityTypeShape EntityType="QLPXetNghiemYTModel.ChucVu" Width="1.5" PointX="0.75" PointY="5.5" />
-        <EntityTypeShape EntityType="QLPXetNghiemYTModel.HoSoBN" Width="1.5" PointX="3" PointY="12.25" />
+        <EntityTypeShape EntityType="QLPXetNghiemYTModel.HoSoBN" Width="1.5" PointX="3" PointY="8.5" />
         <EntityTypeShape EntityType="QLPXetNghiemYTModel.HoSoXNBN" Width="1.5" PointX="5.25" PointY="1" />
-        <EntityTypeShape EntityType="QLPXetNghiemYTModel.LoaiXN" Width="1.5" PointX="0.75" PointY="8.875" />
+        <EntityTypeShape EntityType="QLPXetNghiemYTModel.LoaiXN" Width="1.5" PointX="0.75" PointY="12.375" />
         <EntityTypeShape EntityType="QLPXetNghiemYTModel.NhanVien" Width="1.5" PointX="3" PointY="1" />
         <EntityTypeShape EntityType="QLPXetNghiemYTModel.PhongBan" Width="1.5" PointX="0.75" PointY="1.5" />
         <EntityTypeShape EntityType="QLPXetNghiemYTModel.sysdiagram" Width="1.5" PointX="2.75" PointY="4.75" />
-        <EntityTypeShape EntityType="QLPXetNghiemYTModel.XetNghiem" Width="1.5" PointX="3" PointY="8.25" />
+        <EntityTypeShape EntityType="QLPXetNghiemYTModel.XetNghiem" Width="1.5" PointX="3" PointY="11.75" />
         <AssociationConnector Association="QLPXetNghiemYTModel.FK_HoSoBN_BenhNhan" />
         <AssociationConnector Association="QLPXetNghiemYTModel.FK_NhanVien_ChucVu" />
         <AssociationConnector Association="QLPXetNghiemYTModel.FK_HoSoXNBN_HoSoBN" />

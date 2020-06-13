@@ -99,7 +99,7 @@
                 <h2 style="color: white"><b>Thông tin bệnh nhân</b></h2>
             </div>
             <div class="agile-form">
-                <form action="/" method="post">
+                <form class="form-benhnhan" >
                     <ul class="field-list" id="listForm">
                         <li>
                             <label class="form-label">
@@ -107,7 +107,7 @@
                                 <span class="form-required"> * </span>
                             </label>
                             <div class="form-input">
-                                <input  type="text" name="patient_name" required fieldname="HotenBN">
+                                <input type="text" name="patient_name" required fieldname="HotenBN">
                             </div>
                         </li>
                         <li>
@@ -118,8 +118,8 @@
                             <div class="form-input">
                                 <select class="form-dropdown" name="gender" required fieldname="GTBN">
                                     <option value="">&nbsp;</option>
-                                    <option value="Male"> Nam </option>
-                                    <option value="Female"> Nữ </option>
+                                    <option value="1"> Nam </option>
+                                    <option value="0"> Nữ </option>
                                 </select>
                             </div>
                         <li>
@@ -178,18 +178,18 @@
                                 <span class="form-sub-label">
                                     <select name="month" fieldname="ThangSinhBN">
                                         <option>&nbsp;</option>
-                                        <option value="January"> Tháng một </option>
-                                        <option value="February"> Tháng hai </option>
-                                        <option value="March"> Tháng ba </option>
-                                        <option value="April"> Tháng tư </option>
-                                        <option value="May"> Tháng năm </option>
-                                        <option value="June"> Tháng sáu </option>
-                                        <option value="July"> Tháng bảy </option>
-                                        <option value="August"> Tháng tám </option>
-                                        <option value="September"> Tháng chín </option>
-                                        <option value="October"> Tháng mười </option>
-                                        <option value="November"> Tháng mười một </option>
-                                        <option value="December"> Tháng mười hai </option>
+                                        <option value="1"> Tháng một </option>
+                                        <option value="2"> Tháng hai </option>
+                                        <option value="3"> Tháng ba </option>
+                                        <option value="4"> Tháng tư </option>
+                                        <option value="5"> Tháng năm </option>
+                                        <option value="6"> Tháng sáu </option>
+                                        <option value="7"> Tháng bảy </option>
+                                        <option value="8"> Tháng tám </option>
+                                        <option value="9"> Tháng chín </option>
+                                        <option value="10"> Tháng mười </option>
+                                        <option value="11"> Tháng mười một </option>
+                                        <option value="12"> Tháng mười hai </option>
                                     </select>
                                     <label class="form-sub-label1"> Tháng </label>
                                 </span>
@@ -207,7 +207,7 @@
                             <div class="form-input add">
                                 <span class="form-sub-label">
                                     <input type="text" name="street_address" placeholder=" " required fieldname="DiachiBN">
-                                    
+
                                 </span>
                             </div>
                         </li>
@@ -233,7 +233,8 @@
 
                             </div>
                         </li>
-                        <input class="inthongtinBN" type="submit" value="In thông tin">
+                        
+                        <button class="inthongtinBN">In thông tin</button>
                     </ul>
 
                 </form>
@@ -289,5 +290,9 @@
         </div>
     </footer>
 </body>
+<script src="/assets/js/lib/jquery.min.js"></script>
+<script src="/assets/js/lib/bootstrap.min.js"></script>
+
+<script src="/assets/main/js/service.js"></script>
 <script src="/assets/main/js/benhnhan.js"></script>
 </html>

@@ -11,6 +11,7 @@
     <Property Name="SDT" Type="char" MaxLength="11" Nullable="false" />
     <Property Name="Email" Type="nchar" MaxLength="100" />
     <Property Name="CMND" Type="nchar" MaxLength="12" Nullable="false" />
+    <Property Name="GT" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="ChucVu">
     <Key>
