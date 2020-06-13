@@ -145,47 +145,39 @@
             <div class="job-filter-result">
                 <div class="job-list">
                     <div class="thumb">
-                        <a href="#">
-                            <img src="image/job/company-logo-8.png" class="img-fluid" alt="">
-                        </a>
+
                     </div>
                     <div class="body">
                         <div class="content">
-                            <h4><a href="job-details.html"> Nguyễn Đức Toàn </a></h4>
+                            <h4>Nguyễn Đức Toàn</h4>
                             <div class="info">
-                                <span class="office-location"><i data-feather="map-pin"></i>Nam</span>
-                                <span class="job-type temporary"><i data-feather="clock"></i>Hà Nội</span>
+                                <span class="office-location" fieldname="GTBN"><i data-feather="map-pin"></i>Nam</span>
+                                <span class="job-type temporary" fieldname="DiaChiBN"><i data-feather="clock"></i>Hà Nội</span>
                             </div>
                         </div>
                         <div class="more">
                             <div class="buttons">
                                 <a href="#" class="button" data-toggle="modal" data-target="#apply-popup-id">Xét Nghiệm</a>
-                                <a href="#" class="favourite"><i data-feather="heart"></i></a>
                             </div>
-                            <p class="deadline">Deadline: Oct 31,  2020</p>
                         </div>
                     </div>
                 </div>
                 <div class="job-list">
                     <div class="thumb">
-                        <a href="#">
-                            <img src="image/job/company-logo-8.png" class="img-fluid" alt="">
-                        </a>
+
                     </div>
                     <div class="body">
                         <div class="content">
-                            <h4><a href="job-details.html"> Nguyễn Đức Toàn </a></h4>
+                            <h4>Nguyễn Đức Toàn</h4>
                             <div class="info">
-                                <span class="office-location"><i data-feather="map-pin"></i>Nam</span>
-                                <span class="job-type temporary"><i data-feather="clock"></i>Hà Nội</span>
+                                <span class="office-location" fieldname="GTBN"><i data-feather="map-pin"></i>Nam</span>
+                                <span class="job-type temporary" fieldname="DiaChiBN"><i data-feather="clock"></i>Hà Nội</span>
                             </div>
                         </div>
                         <div class="more">
                             <div class="buttons">
                                 <a href="#" class="button" data-toggle="modal" data-target="#apply-popup-id">Xét Nghiệm</a>
-                                <a href="#" class="favourite"><i data-feather="heart"></i></a>
                             </div>
-                            <p class="deadline">Deadline: Oct 31,  2020</p>
                         </div>
                     </div>
                 </div>
@@ -205,7 +197,7 @@
                                                     <span class="form-required"> * </span>
                                                 </label>
                                                 <div class="form-input">
-                                                    <input type="text" name="patient_name" placeholder="Nhập họ tên bệnh nhân" required>
+                                                    <input type="text" name="patient_name" placeholder="Nhập họ tên bệnh nhân" required fieldname="HoTenBN">
                                                 </div>
                                             </li>
                                             <li>
@@ -214,8 +206,8 @@
                                                     <span class="form-required"> * </span>
                                                 </label>
                                                 <div class="form-input">
-                                                    <select class="form-dropdown" name="gender" required>
-                                                        <option value="">&nbsp;</option>
+                                                    <select class="form-dropdown" name="gender" required fieldname="GTBN">
+                                                        <option value="">&nbsp;</option 
                                                         <option value="Male"> Nam </option>
                                                         <option value="Female"> Nữ </option>
                                                     </select>
@@ -227,7 +219,7 @@
                                                     <span class="form-required"> * </span>
                                                 </label>
                                                 <div class="form-input">
-                                                    <input type="text" name="mobile_number" placeholder="Số điện thoại" required>
+                                                    <input type="text" name="mobile_number" placeholder="Số điện thoại" required fieldname="CMND"
                                                 </div>
                                             </li>
                                             <li>
@@ -237,7 +229,7 @@
                                                 </label>
                                                 <div class="form-input dob">
                                                     <span class="form-sub-label">
-                                                        <select name="day" class="day">
+                                                        <select name="day" class="day" fieldname="NgaySinhBN">
                                                             <option>&nbsp;</option>
                                                             <option value="1"> 1 </option>
                                                             <option value="2"> 2 </option>
@@ -274,7 +266,7 @@
                                                         <label class="form-sub-label1"> Ngày </label>
                                                     </span>
                                                     <span class="form-sub-label">
-                                                        <select name="month">
+                                                        <select name="month" fieldname="ThangSinhBN">
                                                             <option>&nbsp;</option>
                                                             <option value="January"> 01 </option>
                                                             <option value="February"> 02 </option>
@@ -292,7 +284,7 @@
                                                         <label class="form-sub-label1"> Tháng </label>
                                                     </span>
                                                     <span class="form-sub-label">
-                                                        <input type="text" class="year" name="year" placeholder=" Enter Year" required>
+                                                        <input type="text" class="year" name="year" placeholder=" Enter Year" required fieldname="NamSinhBN">
                                                         <label class="form-sub-label1"> Năm </label>
                                                     </span>
                                                 </div>
@@ -302,7 +294,7 @@
                                                     Địa Chỉ
                                                 </label>
                                                 <div class="form-input">
-                                                    <input type="text">
+                                                    <input type="text" fieldname="DiaChi">
                                                 </div>
                                             </li>
                                             <li>
@@ -310,7 +302,7 @@
                                                     Kết quả xét nghiệm
                                                 </label>
                                                 <div class="table" style=" margin-top: 10px;">
-                                                    <table class="table-basic" border="1" style="border-collapse: collapse;width: 558px; ">
+                                                    <table class="table-basic kquaXN" border="1" style="border-collapse: collapse;width: 558px; ">
                                                         <thead>
                                                         <th style="width: 40%;background-color: #678">Tên Xét Ngiệm</th>
                                                         <th style="background-color: #678">Trị số bình thường</th>
@@ -350,8 +342,8 @@
 
                                         </ul>
                                         <div style="display:flex">
-                                            <input type="submit" value="IN KẾT QUẢ">
-                                            <input type="submit" value="LẤY KẾT QUẢ">
+                                            <input class="layKQ" type="submit" value="IN KẾT QUẢ">
+                                            <input class="inKQ" type="submit" value="LẤY KẾT QUẢ">
                                         </div>
                                     </form>
                                 </div>

@@ -968,6 +968,7 @@
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="View\BenhNhan\Index.html" />
+    <Content Include="View\BenhNhan\HoaDon.html" />
     <Content Include="View\XetNghiem\hangdoi.html" />
     <Content Include="View\XetNghiem\hosoxetnghiem.html" />
     <Content Include="View\XetNghiem\xetnghiem.html" />

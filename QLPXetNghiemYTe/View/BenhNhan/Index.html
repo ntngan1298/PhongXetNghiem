@@ -107,7 +107,7 @@
                                 <span class="form-required"> * </span>
                             </label>
                             <div class="form-input">
-                                <input type="text" name="patient_name" required>
+                                <input  type="text" name="patient_name" required fieldname="HotenBN">
                             </div>
                         </li>
                         <li>
@@ -116,7 +116,7 @@
                                 <span class="form-required"> * </span>
                             </label>
                             <div class="form-input">
-                                <select class="form-dropdown" name="gender" required>
+                                <select class="form-dropdown" name="gender" required fieldname="GTBN">
                                     <option value="">&nbsp;</option>
                                     <option value="Male"> Nam </option>
                                     <option value="Female"> Nữ </option>
@@ -129,7 +129,7 @@
                                 <span class="form-required"> * </span>
                             </label>
                             <div class="form-input">
-                                <input type="text" name="mobile_number" required>
+                                <input type="text" name="mobile_number" required fieldname="SDTBN">
                             </div>
                         </li>
                         <li>
@@ -139,7 +139,7 @@
                             </label>
                             <div class="form-input dob">
                                 <span class="form-sub-label">
-                                    <select name="day" class="day">
+                                    <select name="day" class="day" fieldname="NgaysinhBN">
                                         <option>&nbsp;</option>
                                         <option value="1"> 1 </option>
                                         <option value="2"> 2 </option>
@@ -176,7 +176,7 @@
                                     <label class="form-sub-label1"> Ngày </label>
                                 </span>
                                 <span class="form-sub-label">
-                                    <select name="month">
+                                    <select name="month" fieldname="ThangSinhBN">
                                         <option>&nbsp;</option>
                                         <option value="January"> Tháng một </option>
                                         <option value="February"> Tháng hai </option>
@@ -194,7 +194,7 @@
                                     <label class="form-sub-label1"> Tháng </label>
                                 </span>
                                 <span class="form-sub-label">
-                                    <input type="text" class="year" name="year" required>
+                                    <input type="text" class="year" name="year" required fieldname="NamsinhBN">
                                     <label class="form-sub-label1"> Năm </label>
                                 </span>
                             </div>
@@ -206,20 +206,8 @@
                             </label>
                             <div class="form-input add">
                                 <span class="form-sub-label">
-                                    <input type="text" name="street_address" placeholder=" " required>
-                                    <label class="form-sub-label1"> Số nhà </label>
-                                </span>
-                                <span class="form-sub-label">
-                                    <input type="text" name="street_address2" placeholder=" " required>
-                                    <label class="form-sub-label1"> Xã/ phường </label>
-                                </span>
-                                <span class="form-sub-label">
-                                    <input type="text" name="city" placeholder=" " required>
-                                    <label class="form-sub-label1"> Quận/ Huyện </label>
-                                </span>
-                                <span class="form-sub-label">
-                                    <input type="text" name="state" placeholder=" " required>
-                                    <label class="form-sub-label1"> Tỉnh thành </label>
+                                    <input type="text" name="street_address" placeholder=" " required fieldname="DiachiBN">
+                                    
                                 </span>
                             </div>
                         </li>
@@ -230,7 +218,7 @@
                             </label>
                             <div class="form-input add">
                                 <span class="form-sub-label">
-                                    <input type="text" name="street_address" placeholder=" " required>
+                                    <input type="text" name="street_address" placeholder=" " required fieldname="CMNDBN">
                                     <label class="form-sub-label1"> </label>
                                 </span>
                             </div>
@@ -241,11 +229,11 @@
                                 <span class="form-required"> * </span>
                             </label>
                             <div class="form-input">
-                                <input type="email" name="email" required>
+                                <input type="email" name="email" required fieldname="EmailBN">
 
                             </div>
                         </li>
-                        <input type="submit" value="In thông tin">
+                        <input class="inthongtinBN" type="submit" value="In thông tin">
                     </ul>
 
                 </form>
