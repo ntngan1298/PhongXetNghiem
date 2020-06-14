@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
 
     $('.inthongtinBN').click(function () {
-        debugger
+        
         var benhNhan = {};
         benhNhan["HoTen"] = $($('.form-benhnhan [fieldname="HotenBN"]').first()).val();
 

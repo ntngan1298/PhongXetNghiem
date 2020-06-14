@@ -101,12 +101,12 @@
         </div>
     </header>
     <div class="w3ls-banner" style="margin-top: 155px;">
-        <div class="container"style="background-color: #4f6373!important">
+        <div class="container" style="background-color: #4f6373!important">
             <div class="heading">
                 <h2 style="color: white"><b>XÉT NGHIỆM</b></h2>
             </div>
             <div class="agile-form">
-                <form action="/" method="post">
+                <form class="form-xetnghiem">
                     <ul class="field-list">
                         <li>
                             <label class="form-label">
@@ -117,7 +117,23 @@
                                 <input type="text" name="patient_name" placeholder="Nhập tên" required fieldname="TenXN">
                             </div>
                         </li>
-
+                        <li>
+                            <label class="form-label">
+                                Loại xét nghiệm
+                                <span class="form-required"> * </span>
+                            </label>
+                            <!--<div class="form-input">
+                                <input type="text" name="patient_name" placeholder="Nhập tên" required fieldname="TenXN">
+                            </div>-->
+                            <div class="form-input">
+                                <select class="form-dropdown" name="gender" required fieldname="LoaiXN">
+                                    <option value="">&nbsp;</option>
+                                    <option value="1"> Huyết học </option>
+                                    <option value="2"> Hóa sinh </option>
+                                    <option value="3"> Vi sinh </option>
+                                </select>
+                            </div>
+                        </li>
                         <!--<li>
                             <label class="form-label">
                                 Trị Số Bình Thường Nam
@@ -232,4 +248,10 @@
         </div>
     </footer>
 </body>
+
+<script src="/assets/js/lib/jquery.min.js"></script>
+<script src="/assets/js/lib/bootstrap.min.js"></script>
+
+<script src="/assets/main/js/service.js"></script>
+<script src="/assets/main/js/xetnghiem.js"></script>
 </html>
