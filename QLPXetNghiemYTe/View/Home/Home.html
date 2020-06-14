@@ -1,9 +1,4 @@
-﻿<!--
-    Author: W3layouts
-    Author URL: http://w3layouts.com
-    License: Creative Commons Attribution 3.0 Unported
-    License URL: http://creativecommons.org/licenses/by/3.0/
--->
+﻿
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,20 +9,20 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Life Care - Responsive HTML5 Multi Page Template</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
     <!-- stylesheets -->
+    <!--<link rel="stylesheet" href="css/font-awesome.min.css">-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/assets/css/lib/xetnghiem.css">
-    <!-- google fonts  -->
-    <link href="//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
-    <link href="//fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i,700" rel="stylesheet">
-    <!-- stylesheets -->
-    <link rel="stylesheet" href="css/font-awesome.css">
-    <link rel="stylesheet" href="/assets/css/lib/xetnghiem.css">
-    <!-- google fonts  -->
-    <link href="//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
-    <link href="//fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i,700" rel="stylesheet">
+    <!-- Site Icons -->
     <link rel="shortcut icon" href="/assets/img/fevicon.ico.png" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="//assets/img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+    <!--<link rel="stylesheet" href="/assets/css/lib/benhnhanInfo.css">-->
+    <!-- google fonts  -->
+    <link href="//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i,700" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="../../assets/css/lib/bootstrap.min.css" rel="stylesheet" />
@@ -44,11 +39,16 @@
     <script src="js/modernizer.js"></script>
     <!-- [if lt IE 9] -->
 </head>
-<body>
+<body class="clinic_version">
+    <!-- LOADER -->
+    <div id="preloader">
+        <img class="preloader" src="/assets/img/heart-loading2.gif" alt="">
+    </div>
+    <!-- END LOADER -->
     <header>
         <div class="header-top wow fadeIn">
             <div class="container1">
-                <a class="navbar-brand" href="index.html"><img src="/assets/img//logo.png" alt="image"></a>
+                <a class="navbar-brand" href="index.html"><img src="/assets/img/logo.png" alt="image"></a>
                 <div class="right-header">
                     <div class="header-info">
                         <div class="info-inner">
@@ -68,7 +68,7 @@
             </div>
         </div>
         <div class="header-bottom wow fadeIn">
-            <div class="container1">
+            <div class="container">
                 <nav class="main-menu">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i class="fa fa-bars" aria-hidden="true"></i></button>
@@ -100,98 +100,79 @@
             </div>
         </div>
     </header>
-    <div class="w3ls-banner" style="margin-top: 155px;">
-        <div class="container"style="background-color: #4f6373!important">
-            <div class="heading">
-                <h2 style="color: white"><b>XÉT NGHIỆM</b></h2>
+    <div id="home" class="parallax first-section wow fadeIn" data-stellar-background-ratio="0.4" style="background-image:url('/assets/img/slider-bg.png');">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="text-contant">
+                        <h2 style="margin-left: 90px">
+                            <span class="center"><span class="icon"><img src="/assets/img/icon-logo.png" alt="#" /></span></span>
+                            <a href="" class="typewrite" data-period="2000" data-type='[ "Chào mừng đến với Life Care", "Hãy đến với Life Care", "Chúng tôi là chuyên gia!" ]'>
+                                <span class="wrap"></span>
+                            </a>
+                        </h2>
+                    </div>
+                </div>
             </div>
-            <div class="agile-form">
-                <form action="/" method="post">
-                    <ul class="field-list">
-                        <li>
-                            <label class="form-label">
-                                Tên
-                                <span class="form-required"> * </span>
-                            </label>
-                            <div class="form-input">
-                                <input type="text" name="patient_name" placeholder="Nhập tên" required fieldname="TenXN">
-                            </div>
-                        </li>
-
-                        <!--<li>
-                            <label class="form-label">
-                                Trị Số Bình Thường Nam
-
-                            </label>
-                            <div class="form-input">
-                                <input type="text" >
-                            </div>
-                        </li>-->
-                        <li>
-                            <label class="form-label">
-                                Trị số bình thường nam
-                                <span class="form-required"> * </span>
-                            </label>
-                            <div class="form-input add">
-                                <span class="form-sub-label">
-                                    <input type="text" name="street_address" placeholder=" " required fieldname="TriSoNamMin">
-
-                                </span>
-                                <span> - </span>
-                                <span class="form-sub-label">
-                                    <input type="text" name="street_address2" placeholder=" " required fieldname="TriSoNamMax">
-
-                                </span>
-                            </div>
-                        </li>
-
-                        <li>
-                            <label class="form-label">
-                                Trị số bình thường nữ
-                                <span class="form-required"> * </span>
-                            </label>
-                            <div class="form-input add">
-                                <span class="form-sub-label">
-                                    <input type="text" name="street_address" placeholder=" " required fieldname="TriSoNuMin">
-
-                                </span>
-                                <span> - </span>
-                                <span class="form-sub-label">
-                                    <input type="text" name="street_address2" placeholder=" " required fieldname="TriSoNuMax">
-                                </span>
-                            </div>
-                        </li>
-                        <li>
-                            <label class="form-label">
-                                Đơn vị
-                            </label>
-                            <div class="form-input">
-                                <input type="text" fieldname="DonVi">
-                            </div>
-                        </li>
-                        <li>
-                            <label class="form-label">
-                                Đơn Giá
-                            </label>
-                            <div class="form-input">
-                                <input type="text" fieldname="DonGia">
-                            </div>
-                        </li>
-                    </ul>
-                    <input class="saveXN" type="submit" value="Lưu" style="margin-left:470px">
-                </form>
-            </div>
+            <!-- end row -->
         </div>
-        <div class="copyright">
-            <p>© 2020 Medical </p>
+        <!-- end container -->
+    </div>
+    <!-- end section -->
+    <div id="time-table" class="time-table-section" style="margin-left: 189px ">
+        <div class="container" style="display: flex">
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="row">
+                    <div class="service-time one" style="background:#2895f1;">
+                        <span class="info-icon"><i class="fa fa-ambulance" aria-hidden="true"></i></span>
+                        <h1 style="color: white;margin-top: 154px; text-align:center">Tiếp nhận bệnh nhân</h1>
+                        <!--<p>Dignissimos ducimus qui blanditii sentium volta tum deleniti atque cori as quos dolores et quas mole.</p>-->
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="row">
+                    <div class="service-time middle" style="background:#0071d1;">
+                        <span class="info-icon"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
+                        <h1 style="color: white;margin-top: 154px; text-align:center">Quản lý hồ sơ</h1>
+                        <!--<div class="time-table-section">
+                            <ul>
+                                <li><span class="left">Monday - Friday</span><span class="right">8.00 – 18.00</span></li>
+                                <li><span class="left">Saturday</span><span class="right">8.00 – 16.00</span></li>
+                                <li><span class="left">Sunday</span><span class="right">8.00 – 13.00</span></li>
+                            </ul>
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="row">
+                    <div class="service-time three" style="background:#0060b1;">
+                        <span class="info-icon"><i class="fa fa-hospital-o" aria-hidden="true"></i></span>
+                        <h1 style="color: white;margin-top: 154px; text-align:center">Xét nghiệm</h1>
+                        <!--<p>Dignissimos ducimus qui blanditii sentium volta tum deleniti atque cori as quos dolores et quas mole.</p>-->
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    <div id="about" class="section wow fadeIn">
+        <div class="container">
+            <div class="heading">
+                <span class="icon-logo"><img src="/assets/img/icon-logo.png" alt="#"></span>
+                <h2><b>Tận tâm - Nhiệt tình- Chu đáo</b></h2>
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end container -->
+    </div>
+    <!-- end section -->
     <footer id="footer" class="footer-area wow fadeIn">
-        <div class="container" style="background-color:white;>
+        <div class="container">
             <div class="row">
                 <div class="col-md-4">
                     <div class="logo padding">
-                        <a href=""><img src="/assets/img//logo.png" alt=""></a>
+                        <a href=""><img src="images/logo.png" alt=""></a>
                         <p>Locavore pork belly scen ester pine est chill wave microdosing pop uple itarian cliche artisan.</p>
                     </div>
                 </div>
@@ -231,5 +212,36 @@
             </div>
         </div>
     </footer>
+    <div class="copyright-area wow fadeIn">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="footer-text">
+                        <p>© 2018 Lifecare. All Rights Reserved.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="social">
+                        <ul class="social-links">
+                            <li><a href=""><i class="fa fa-rss"></i></a></li>
+                            <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                            <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                            <li><a href=""><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href=""><i class="fa fa-youtube"></i></a></li>
+                            <li><a href=""><i class="fa fa-pinterest"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end copyrights -->
+    <a href="#home" data-scroll class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+    <!-- all js files -->
+    <script src="/assets/js/lib/all.js"></script>
+    <!-- all plugins -->
+    <script src="/assets/js/lib/custom.js"></script>
+    <!-- map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNUPWkb4Cjd7Wxo-T4uoUldFjoiUA1fJc&callback=myMap"></script>
 </body>
 </html>
