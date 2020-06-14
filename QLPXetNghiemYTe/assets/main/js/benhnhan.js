@@ -1,19 +1,23 @@
 ﻿$(document).ready(function () {
+
     $('.inthongtinBN').click(function () {
         debugger
         var benhNhan = {};
-        benhNhan["HoTen"] = $('.form-benhnhan [fielname="HotenBN"]').val();
+        benhNhan["HoTen"] = $($('.form-benhnhan [fieldname="HotenBN"]').first()).val();
 
-        var ngay = $('.form-benhnhan [fielname="NgaysinhBN"]').val();
-        var thang = $('.form-benhnhan [fielname="ThangSinhBN"]').val();
-        var nam = $('.form-benhnhan [fielname="NamsinhBN"]').val();
-        benhNhan["SN"] = new Date(`${ngay}-${thang}-${nam}`)
-        benhNhan["DiaChi"] = $('.form-benhnhan [fielname="DiachiBN"]').val();
-        benhNhan["SDT"] = $('.form-benhnhan [fielname="SDTBN"]').val();
-        benhNhan["Email"] = $('.form-benhnhan [fielname="EmailBN"]').val();
-        benhNhan["CMND"] = $('.form-benhnhan [fielname="CMNDBN"]').val();
-        benhNhan["GT"] = $('.form-benhnhan [fielname="GTBN"]').val();
+        var ngay = $($('.form-benhnhan [fieldname="NgaysinhBN"]').first()).val();
+        var thang =$( $('.form-benhnhan [fieldname="ThangSinhBN"]').first()).val();
+        var nam = $($('.form-benhnhan [fieldname="NamsinhBN"]').first()).val();
+        benhNhan["SN"] = new Date(`${thang}-${ngay}-${nam}`);
+        benhNhan["DiaChi"] = $($('.form-benhnhan [fieldname="DiachiBN"]').first()).val();
+        benhNhan["SDT"] = $($('.form-benhnhan [fieldname="SDTBN"]').first()).val();
+        benhNhan["Email"] = $($('.form-benhnhan [fieldname="EmailBN"]').first()).val();
+        benhNhan["CMND"] = $($('.form-benhnhan [fieldname="CMNDBN"]').first()).val();
+        benhNhan["GT"] = $($('.form-benhnhan [fieldname="GTBN"]').first()).val();
+        serviceAjax.get('/api/BenhNhans', null, true, function (res) {
+            alert("Lưu thành công");
 
+        });
 
         serviceAjax.post('/api/BenhNhans', benhNhan, true, function (res) {
             alert("Lưu thành công");
