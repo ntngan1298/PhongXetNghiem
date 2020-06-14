@@ -13,25 +13,25 @@
     <!--<link rel="stylesheet" href="css/font-awesome.min.css">-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="/assets/main/css/lib/hsXetNghiem.css">
+    <link rel="stylesheet" href="/assets/css/lib/hsXetNghiem.css">
     <!-- google fonts  -->
     <link href="//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i,700" rel="stylesheet">
-    <link rel="shortcut icon" href="images/fevicon.ico.png" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="shortcut icon" href="/assets/img/fevicon.ico.png" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../assets/css/lib/bootstrap.min.css" rel="stylesheet" />
     <!-- Site CSS -->
-    <link href="../../assets/css/style.css" rel="stylesheet" />
+    <link href="../../assets/css/lib/style.css" rel="stylesheet" />
     <!-- Colors CSS -->
-    <link rel="stylesheet" href="../../assets/css/colors.css">
+    <link rel="stylesheet" href="../../assets/css/lib/colors.css">
     <!-- ALL VERSION CSS -->
-    <link rel="stylesheet" href="../../assets/css/versions.css">
     <!-- Responsive CSS -->
-    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="stylesheet" href="../../assets/css/lib/responsive.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="../../assets/css/custom.css">
+    <link rel="stylesheet" href="../../assets/css/lib/custom.css">
+    <!-- Modernizer for Portfolio -->
     <script src="js/modernizer.js"></script>
     <!-- [if lt IE 9] -->
 </head>
@@ -40,19 +40,19 @@
     <header>
         <div class="header-top wow fadeIn">
             <div class="container1">
-                <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="image"></a>
+                <a class="navbar-brand" href="index.html"><img src="/assets/img/logo.png" alt="image"></a>
                 <div class="right-header">
                     <div class="header-info">
                         <div class="info-inner">
-                            <span class="icontop"><img src="images/phone.png" alt="#"></span>
+                            <span class="icontop"><img src="/assets/img/phone.png" alt="#"></span>
                             <span class="iconcont"><a href="tel:800 123 456">800 123 456</a></span>
                         </div>
                         <div class="info-inner">
-                            <span class="icontop"><img src="images/email.png" alt="#"></i></span>
+                            <span class="icontop"><img src="/assets/img/email.png" alt="#"></i></span>
                             <span class="iconcont"><a data-scroll href="mailto:info@yoursite.com">info@Lifecare.com</a></span>
                         </div>
                         <div class="info-inner">
-                            <span class="icontop"><img src="images/clock.png" alt="#"></i></span>
+                            <span class="icontop"><img src="/assets/img/clock.png" alt="#"></i></span>
                             <span class="iconcont"><a data-scroll href="#">Daily: 7:00am - 8:00pm</a></span>
                         </div>
                     </div>
@@ -208,12 +208,52 @@
                                 Các loại xét nghiệm.
                                 <span class="form-required"> * </span>
                             </label>
-                            <div class="form-input2 typeDV">
-                                <input id="hoasinh" type="checkbox" name="test1"><label class="type-of-test">Hóa sinh</label>
-                                <input id="huyethoc" type="checkbox" name="test2"><label class="type-of-test">Huyết học</label>
-                                <input id="visinh" type="checkbox" name="test3"><label class="type-of-test">Vi sinh</label>
-                            </div>
-                        </li>
+                            <div class="form-input2 typeDV" style="margin-left: 348px">
+
+                                <input type="checkbox" name="test1"><label class="type-of-test">Hóa sinh</label>
+                                <input type="checkbox" name="test2"><label class="type-of-test">Huyết học</label>
+                                <input type="checkbox" name="test3"><label class="type-of-test">Vi sinh</label>
+                                <div style="white-space: nowrap">
+                                    <span id="span1">
+                                        <input type="checkbox" name="test4"><label class="type-of-test">Ure</label>
+                                        <br />
+                                        <input type="checkbox" name="test5"><label class="type-of-test">Glucose</label>
+                                        <br />
+                                        <input type="checkbox" name="test6"><label class="type-of-test">Acid Uric</label>
+                                        <br />
+                                        <input type="checkbox" name="test7"><label class="type-of-test">Tỉ lệ A/G</label>
+                                        <br />
+                                        <input type="checkbox" name="test14"><label class="type-of-test">Creatinin</label>
+                                        <br />
+                                    </span>
+                                    <span id="span1">
+                                        <input type="checkbox" name="test4"><label class="type-of-test">MVC</label>
+                                        <br />
+                                        <input type="checkbox" name="test5"><label class="type-of-test">MCH</label>
+                                        <br />
+                                        <input type="checkbox" name="test6"><label class="type-of-test">MCHC</label>
+                                        <br />
+                                        <input type="checkbox" name="test7"><label class="type-of-test">Mono</label>
+                                        <br />
+                                        <input type="checkbox" name="test8"><label class="type-of-test">Lympho</label>
+                                        <br />
+                                    </span>
+                                    <span id="span1">
+                                        <input type="checkbox" name="test9"><label class="type-of-test">Penicilline</label>
+                                        <br />
+                                        <input type="checkbox" name="test10"><label class="type-of-test">Ampiciline</label>
+                                        <br />
+                                        <input type="checkbox" name="test11"><label class="type-of-test">Aztreonam</label>
+                                        <br />
+                                        <input type="checkbox" name="test12"><label class="type-of-test">Mezlocilline</label>
+                                        <br />
+                                        <input type="checkbox" name="test13"><label class="type-of-test">Cephalotine</label>
+                                        <br />
+                                    </span>
+
+                                </div>
+
+                            </li>
                     </ul>
                         <input type="submit" value="xác nhận">
                     
@@ -230,7 +270,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="logo padding">
-                        <a href=""><img src="images/logo.png" alt=""></a>
+                        <a href=""><img src="/assets/img/logo.png" alt=""></a>
                         <p>Locavore pork belly scen ester pine est chill wave microdosing pop uple itarian cliche artisan.</p>
                     </div>
                 </div>
