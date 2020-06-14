@@ -180,7 +180,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
-    <Compile Include="Controllers\BenhNhansController.cs" />
+    <Compile Include="Controllers\BenhNhanController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HoSoBNsController.cs" />
     <Compile Include="Controllers\IActionResult.cs" />
@@ -887,6 +887,7 @@
     <Content Include="assets\leaflet\js\leaflet-src.js" />
     <Content Include="assets\leaflet\js\leaflet.markercluster-src.js" />
     <Content Include="assets\main\js\benhnhan.js" />
+    <Content Include="assets\main\js\hangdoi.js" />
     <Content Include="assets\main\js\service.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
