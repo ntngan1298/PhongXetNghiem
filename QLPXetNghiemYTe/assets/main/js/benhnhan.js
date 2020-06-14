@@ -14,10 +14,7 @@
         benhNhan["Email"] = $($('.form-benhnhan [fieldname="EmailBN"]').first()).val();
         benhNhan["CMND"] = $($('.form-benhnhan [fieldname="CMNDBN"]').first()).val();
         benhNhan["GT"] = $($('.form-benhnhan [fieldname="GTBN"]').first()).val();
-        serviceAjax.get('/api/BenhNhans', null, true, function (res) {
-            alert("Lưu thành công");
-
-        });
+     
 
         serviceAjax.post('/api/BenhNhans', benhNhan, true, function (res) {
             alert("Lưu thành công");
