@@ -27,6 +27,7 @@ namespace QLPXetNghiemYTe.Entities
         public string SDT { get; set; }
         public string Email { get; set; }
         public string CMND { get; set; }
+        public int GT { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HoSoBN> HoSoBNs { get; set; }

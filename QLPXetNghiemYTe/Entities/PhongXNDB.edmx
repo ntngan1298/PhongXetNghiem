@@ -16,6 +16,7 @@
           <Property Name="SDT" Type="char" MaxLength="11" Nullable="false" />
           <Property Name="Email" Type="nchar" MaxLength="100" />
           <Property Name="CMND" Type="nchar" MaxLength="12" Nullable="false" />
+          <Property Name="GT" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="ChucVu">
           <Key>
@@ -269,6 +270,9 @@
             <Parameter Name="new_diagramname" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_upgraddiagrams" />
+          <FunctionImport Name="UpdateStatusHSBN">
+          <Parameter Name="HSBNID" Mode="In" Type="Int32" />
+          </FunctionImport>
           <EntitySet Name="BenhNhans" EntityType="QLPXetNghiemYTModel.BenhNhan" />
           <EntitySet Name="ChucVus" EntityType="QLPXetNghiemYTModel.ChucVu" />
           <EntitySet Name="HoSoBNs" EntityType="QLPXetNghiemYTModel.HoSoBN" />
@@ -306,9 +310,6 @@
             <End Role="PhongBan" EntitySet="PhongBans" />
             <End Role="NhanVien" EntitySet="NhanViens" />
           </AssociationSet>
-          <FunctionImport Name="UpdateStatusHSBN">
-            <Parameter Name="HSBNID" Mode="In" Type="Int32" />
-          </FunctionImport>
           </EntityContainer>
         <ComplexType Name="GetBNinHD_Result">
           <Property Type="Int32" Name="ID" Nullable="false" />
@@ -358,6 +359,7 @@
           <Property Name="SDT" Type="String" Nullable="false" MaxLength="11" FixedLength="true" Unicode="false" />
           <Property Name="Email" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
           <Property Name="CMND" Type="String" Nullable="false" MaxLength="12" FixedLength="true" Unicode="true" />
+          <Property Name="GT" Type="Int32" Nullable="false" />
           <NavigationProperty Name="HoSoBNs" Relationship="QLPXetNghiemYTModel.FK_HoSoBN_BenhNhan" FromRole="BenhNhan" ToRole="HoSoBN" />
         </EntityType>
         <EntityType Name="ChucVu">
@@ -599,9 +601,11 @@
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="QLPXetNghiemYTModel.Store.sp_renamediagram" />
           <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="QLPXetNghiemYTModel.Store.sp_upgraddiagrams" />
+          <FunctionImportMapping FunctionImportName="UpdateStatusHSBN" FunctionName="QLPXetNghiemYTModel.Store.UpdateStatusHSBN" />
           <EntitySetMapping Name="BenhNhans">
             <EntityTypeMapping TypeName="QLPXetNghiemYTModel.BenhNhan">
               <MappingFragment StoreEntitySet="BenhNhan">
+                <ScalarProperty Name="GT" ColumnName="GT" />
                 <ScalarProperty Name="CMND" ColumnName="CMND" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="SDT" ColumnName="SDT" />
@@ -697,7 +701,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="UpdateStatusHSBN" FunctionName="QLPXetNghiemYTModel.Store.UpdateStatusHSBN" />
           </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

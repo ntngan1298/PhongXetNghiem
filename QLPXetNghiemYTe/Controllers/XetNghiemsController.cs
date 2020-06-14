@@ -12,7 +12,6 @@ using QLPXetNghiemYTe.Entities;
 
 namespace QLPXetNghiemYTe.Controllers
 {
-    [RoutePrefix("XetNghiem")]
     public class XetNghiemsController : ApiController
     {
         private QLPXetNghiemYTEntities db = new QLPXetNghiemYTEntities();

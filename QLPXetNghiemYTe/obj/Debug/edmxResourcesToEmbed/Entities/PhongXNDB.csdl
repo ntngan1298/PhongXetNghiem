@@ -23,6 +23,9 @@
       <Parameter Name="new_diagramname" Mode="In" Type="String" />
     </FunctionImport>
     <FunctionImport Name="sp_upgraddiagrams" />
+    <FunctionImport Name="UpdateStatusHSBN">
+      <Parameter Name="HSBNID" Mode="In" Type="Int32" />
+    </FunctionImport>
     <EntitySet Name="BenhNhans" EntityType="QLPXetNghiemYTModel.BenhNhan" />
     <EntitySet Name="ChucVus" EntityType="QLPXetNghiemYTModel.ChucVu" />
     <EntitySet Name="HoSoBNs" EntityType="QLPXetNghiemYTModel.HoSoBN" />
@@ -60,9 +63,6 @@
       <End Role="PhongBan" EntitySet="PhongBans" />
       <End Role="NhanVien" EntitySet="NhanViens" />
     </AssociationSet>
-    <FunctionImport Name="UpdateStatusHSBN">
-      <Parameter Name="HSBNID" Mode="In" Type="Int32" />
-    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="GetBNinHD_Result">
     <Property Type="Int32" Name="ID" Nullable="false" />
@@ -112,6 +112,7 @@
     <Property Name="SDT" Type="String" Nullable="false" MaxLength="11" FixedLength="true" Unicode="false" />
     <Property Name="Email" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
     <Property Name="CMND" Type="String" Nullable="false" MaxLength="12" FixedLength="true" Unicode="true" />
+    <Property Name="GT" Type="Int32" Nullable="false" />
     <NavigationProperty Name="HoSoBNs" Relationship="QLPXetNghiemYTModel.FK_HoSoBN_BenhNhan" FromRole="BenhNhan" ToRole="HoSoBN" />
   </EntityType>
   <EntityType Name="ChucVu">

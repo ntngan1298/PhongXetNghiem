@@ -60,9 +60,11 @@
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="QLPXetNghiemYTModel.Store.sp_renamediagram" />
     <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="QLPXetNghiemYTModel.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="UpdateStatusHSBN" FunctionName="QLPXetNghiemYTModel.Store.UpdateStatusHSBN" />
     <EntitySetMapping Name="BenhNhans">
       <EntityTypeMapping TypeName="QLPXetNghiemYTModel.BenhNhan">
         <MappingFragment StoreEntitySet="BenhNhan">
+          <ScalarProperty Name="GT" ColumnName="GT" />
           <ScalarProperty Name="CMND" ColumnName="CMND" />
           <ScalarProperty Name="Email" ColumnName="Email" />
           <ScalarProperty Name="SDT" ColumnName="SDT" />
@@ -158,6 +160,5 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <FunctionImportMapping FunctionImportName="UpdateStatusHSBN" FunctionName="QLPXetNghiemYTModel.Store.UpdateStatusHSBN" />
   </EntityContainerMapping>
 </Mapping>
