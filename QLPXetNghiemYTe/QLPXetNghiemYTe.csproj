@@ -931,6 +931,8 @@
     <Content Include="assets\leaflet\js\leaflet.markercluster-src.js" />
     <Content Include="assets\main\js\benhnhan.js" />
     <Content Include="assets\main\js\hangdoi.js" />
+    <Content Include="assets\main\js\home.js" />
+    <Content Include="assets\main\js\hsxn.js" />
     <Content Include="assets\main\js\service.js" />
     <Content Include="assets\main\js\xetnghiem.js" />
     <Content Include="Content\bootstrap-theme.css" />

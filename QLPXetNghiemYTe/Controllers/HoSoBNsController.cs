@@ -101,6 +101,30 @@ namespace QLPXetNghiemYTe.Controllers
             return CreatedAtRoute("DefaultApi", new { id = hoSoBN.ID }, hoSoBN);
         }
 
+
+        //[ResponseType(typeof(HoSoBN))]
+        //public IHttpActionResult PostHoSoBNs(Dictionary<string,List<string>> hoSoBNs)
+        //{
+        //    if (!ModelState.IsValid)
+        //    {
+        //        return BadRequest(ModelState);
+        //    }
+        //    if (hoSoBNs != null && hoSoBNs.ContainsKey("ListXN") && hoSoBNs.ContainsKey("idBN")&&hoSoBNs.Count > 0)
+        //    {
+        //        foreach(var idXN in hoSoBNs["ListXN"])
+        //        {
+        //            save(hoSoBNs("idBN"), idXN);
+        //        }
+        //    }
+        //    for( int i=0; i < hoSoBNs.Count(); i++)
+        //    {
+                
+        //    }
+        // //   db.HoSoBNs.Add(hoSoBN);
+        //    db.SaveChanges();
+
+        //    return CreatedAtRoute("DefaultApi", new { id = hoSoBN.ID }, hoSoBNs);
+        //}
         [HttpPost]
         [Route("ThanhToan/{id}")]
         public IHttpActionResult ThanhToan(int id)

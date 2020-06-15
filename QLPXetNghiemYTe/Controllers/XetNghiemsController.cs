@@ -37,7 +37,20 @@ namespace QLPXetNghiemYTe.Controllers
 
             return Ok(xetNghiem);
         }
+        // get by type
+        [HttpGet]
+        [Route("GetXetNghiemByType/{id}")]
+        [ResponseType(typeof(XetNghiem))]
+        public IHttpActionResult GetXetNghiemByType(int id)
+        {
+            List<XetNghiem> lstxetNghiem = db.XetNghiems.Where(i=> i.LoaiXNID == id).ToList();
+            if (lstxetNghiem == null)
+            {
+                return NotFound();
+            }
 
+            return Ok(lstxetNghiem);
+        }
         // PUT: api/XetNghiems/5
         [ResponseType(typeof(void))]
         public IHttpActionResult PutXetNghiem(int id, XetNghiem xetNghiem)
