@@ -79,7 +79,6 @@ C:\Users\Ngan Nguyen\source\repos\QLPXetNghiemYTe\QLPXetNghiemYTe\bin\System.Web
 C:\Users\Ngan Nguyen\source\repos\QLPXetNghiemYTe\QLPXetNghiemYTe\bin\System.Web.WebPages.Razor.xml
 C:\Users\Ngan Nguyen\source\repos\QLPXetNghiemYTe\QLPXetNghiemYTe\bin\Antlr3.Runtime.pdb
 C:\Users\Ngan Nguyen\source\repos\QLPXetNghiemYTe\QLPXetNghiemYTe\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Ngan Nguyen\source\repos\QLPXetNghiemYTe\QLPXetNghiemYTe\obj\Debug\QLPXetNghiemYTe.csprojAssemblyReference.cache
 C:\Users\Ngan Nguyen\source\repos\QLPXetNghiemYTe\QLPXetNghiemYTe\obj\Debug\QLPXetNghiemYTe.csproj.CoreCompileInputs.cache
 C:\Users\Ngan Nguyen\source\repos\QLPXetNghiemYTe\QLPXetNghiemYTe\obj\Debug\QLPXetNghiemYTe.csproj.CopyComplete
 C:\Users\Ngan Nguyen\source\repos\QLPXetNghiemYTe\QLPXetNghiemYTe\obj\Debug\QLPXetNghiemYTe.dll
@@ -185,3 +184,4 @@ C:\Users\toannguyen\Source\Repos\PhongXetNghiem\QLPXetNghiemYTe\obj\Debug\QLPXet
 C:\Users\toannguyen\Source\Repos\PhongXetNghiem\QLPXetNghiemYTe\obj\Debug\QLPXetNghiemYTe.csproj.CopyComplete
 C:\Users\toannguyen\Source\Repos\PhongXetNghiem\QLPXetNghiemYTe\obj\Debug\QLPXetNghiemYTe.dll
 C:\Users\toannguyen\Source\Repos\PhongXetNghiem\QLPXetNghiemYTe\obj\Debug\QLPXetNghiemYTe.pdb
+C:\Users\Ngan Nguyen\source\repos\QLPXetNghiemYTe\QLPXetNghiemYTe\obj\Debug\QLPXetNghiemYTe.csprojAssemblyReference.cache

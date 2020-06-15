@@ -37,13 +37,22 @@ namespace QLPXetNghiemYTe.Entities
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<XetNghiem> XetNghiems { get; set; }
     
-        public virtual ObjectResult<GetBNinHD_Result> GetBNinHD(Nullable<int> xNID)
+        public virtual ObjectResult<HoSoBN> GetBNinHD(Nullable<int> xNID)
         {
             var xNIDParameter = xNID.HasValue ?
                 new ObjectParameter("XNID", xNID) :
                 new ObjectParameter("XNID", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GetBNinHD_Result>("GetBNinHD", xNIDParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<HoSoBN>("GetBNinHD", xNIDParameter);
+        }
+    
+        public virtual ObjectResult<HoSoBN> GetBNinHD(Nullable<int> xNID, MergeOption mergeOption)
+        {
+            var xNIDParameter = xNID.HasValue ?
+                new ObjectParameter("XNID", xNID) :
+                new ObjectParameter("XNID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<HoSoBN>("GetBNinHD", mergeOption, xNIDParameter);
         }
     
         public virtual ObjectResult<GetDonGiaXNinHSBN_Result> GetDonGiaXNinHSBN(Nullable<int> iDHSBN)

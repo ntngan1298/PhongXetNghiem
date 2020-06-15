@@ -196,6 +196,9 @@
     <Compile Include="Entities\GetBNinHD_Result.cs">
       <DependentUpon>PhongXNDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Entities\GetBNinHD_Result1.cs">
+      <DependentUpon>PhongXNDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entities\GetDonGiaXNinHSBN_Result.cs">
       <DependentUpon>PhongXNDB.tt</DependentUpon>
     </Compile>

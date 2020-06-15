@@ -248,7 +248,7 @@
     <edmx:ConceptualModels>
       <Schema Namespace="QLPXetNghiemYTModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="QLPXetNghiemYTEntities" annotation:LazyLoadingEnabled="true">
-          <FunctionImport Name="GetBNinHD" ReturnType="Collection(QLPXetNghiemYTModel.GetBNinHD_Result)">
+          <FunctionImport Name="GetBNinHD" EntitySet="HoSoBNs" ReturnType="Collection(QLPXetNghiemYTModel.HoSoBN)">
           <Parameter Name="XNID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="GetDonGiaXNinHSBN" ReturnType="Collection(QLPXetNghiemYTModel.GetDonGiaXNinHSBN_Result)">
@@ -536,6 +536,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <ComplexType Name="GetBNinHD_Result1">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+        </ComplexType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -543,17 +546,6 @@
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="QLPXetNghiemYTModelStoreContainer" CdmEntityContainer="QLPXetNghiemYTEntities">
           <FunctionImportMapping FunctionImportName="GetBNinHD" FunctionName="QLPXetNghiemYTModel.Store.GetBNinHD">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="QLPXetNghiemYTModel.GetBNinHD_Result">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="HoTen" ColumnName="HoTen" />
-                <ScalarProperty Name="SN" ColumnName="SN" />
-                <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
-                <ScalarProperty Name="SDT" ColumnName="SDT" />
-                <ScalarProperty Name="Email" ColumnName="Email" />
-                <ScalarProperty Name="CMND" ColumnName="CMND" />
-              </ComplexTypeMapping>
-            </ResultMapping>
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="GetDonGiaXNinHSBN" FunctionName="QLPXetNghiemYTModel.Store.GetDonGiaXNinHSBN">
             <ResultMapping>

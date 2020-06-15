@@ -1936,7 +1936,7 @@ a {
 }
 
 .filtered-job-listing-wrapper {
-    width: 775px;
+    width: 78%;
     margin-top: 40px;
     margin-left: 285px;
     background-color: lightgray;
@@ -11765,4 +11765,11 @@ span + span {
 }
 
 }
+}
+.content.row {
+    width: 90%;
+    color: #4d6373;
+    font-size: 24px;
+}
+.infoBN{
 }

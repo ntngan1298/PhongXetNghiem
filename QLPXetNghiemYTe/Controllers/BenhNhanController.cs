@@ -40,17 +40,24 @@ namespace QLPXetNghiemYTe.Controllers
         }
         [HttpGet]
         [Route("GetBNinHD/{id}")]
-        [ResponseType(typeof(List<BenhNhan>))]
+       // [ResponseType(typeof(List<BenhNhan>))]
         public IHttpActionResult GetBNinHD(int id)
         {
-            var BNlst = db.GetBNinHD(id);
-
-            if (BNlst == null)
+            List<Dictionary<int, BenhNhan>> lsthsBN = new List<Dictionary<int, BenhNhan>>();
+            var lstHS = db.GetBNinHD(id);
+            foreach( var item in lstHS)
+            {
+                BenhNhan bn = db.BenhNhans.Find(item.BNID);
+                Dictionary<int, BenhNhan> hso= new Dictionary<int, BenhNhan>();
+                hso.Add(item.ID, bn);
+                lsthsBN.Add(new Dictionary<int, BenhNhan>(hso));
+            }
+            if (lsthsBN == null)
             {
                 return NotFound();
             }
 
-            return Ok(BNlst);
+            return Ok(lsthsBN);
         }
         // PUT: api/BenhNhans/5
         [ResponseType(typeof(void))]
