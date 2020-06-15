@@ -69,7 +69,7 @@ a:focus, a:hover {
 /*-- //Reset-Code --*/
 
 .w3ls-banner {
-    background: url(/assets/img/banner9.jpg) no-repeat;
+    background: url(../images/banner9.jpg) no-repeat;
     background-size: cover;
     min-height: 100vh;
     color: white;
@@ -396,11 +396,13 @@ input[type="checkbox"] {
         margin-bottom: 20px;
         font-size: 24px;
     }
+
     .heading1 {
         margin-top: 10px;
         margin-bottom: 20px;
         font-size: 24px;
     }
+
     .container {
         width: 270px;
         padding: 15px 5px 15px;
@@ -756,7 +758,7 @@ a {
 	02.0 Banner Style
 ---------------------------------------------*/
 .banner-1-bg {
-    background: url(assets/img/bg/banner-1-bg.jpg) no-repeat bottom left;
+    background: url(../images/bg/banner-1-bg.jpg) no-repeat bottom left;
     background-size: cover;
 }
 
@@ -782,7 +784,7 @@ a {
 
         .banner-1 .banner-content p:before {
             position: absolute;
-            content: url(assets/img/curv-arrow-2.png);
+            content: url(../images/curv-arrow-2.png);
             top: 100%;
             left: 190px;
         }
@@ -802,7 +804,7 @@ a {
         }
 
 .banner-2-bg {
-    background: url(assets/img/bg/banner-2-bg.jpg) no-repeat bottom left;
+    background: url(../images/bg/banner-2-bg.jpg) no-repeat bottom left;
     background-size: cover;
 }
 
@@ -853,7 +855,7 @@ a {
             }
 
 .banner-3-bg {
-    background: url(assets/img/bg/banner-3-bg.jpg) no-repeat center left;
+    background: url(../images/bg/banner-3-bg.jpg) no-repeat center left;
     background-size: cover;
 }
 
@@ -879,7 +881,7 @@ a {
 
         .banner-3 .banner-content p:before {
             position: absolute;
-            content: url(assets/img/curv-arrow.png);
+            content: url(../images/curv-arrow.png);
             top: 100%;
             left: 190px;
         }
@@ -900,7 +902,7 @@ a {
         }
 
 .banner-4-bg {
-    background: url(assets/img/bg/banner-4-bg.jpg) no-repeat center;
+    background: url(../images/bg/banner-4-bg.jpg) no-repeat center;
     background-size: cover;
 }
 
@@ -1932,11 +1934,14 @@ a {
     padding: 40px 30px;
     background: #ffffff;
 }
+
 .filtered-job-listing-wrapper {
     width: 775px;
     margin-top: 40px;
     margin-left: 285px;
+    background-color: lightgray;
 }
+
 .listing-with-map .job-listing-container .filtered-job-listing-wrapper, .listing-with-map .candidate-container .filtered-job-listing-wrapper, .listing-with-map .employer-container .filtered-job-listing-wrapper, .listing-with-map .job-listing-container .filtered-candidate-wrapper, .listing-with-map .candidate-container .filtered-candidate-wrapper, .listing-with-map .employer-container .filtered-candidate-wrapper, .listing-with-map .job-listing-container .filtered-employer-wrapper, .listing-with-map .candidate-container .filtered-employer-wrapper, .listing-with-map .employer-container .filtered-employer-wrapper {
     width: calc(100% - 280px);
 }
@@ -3157,7 +3162,6 @@ a {
                 width: 20px;
                 color: #aaaaaa;
                 margin: 0 auto;
-               
             }
 
             .apply-popup .modal-dialog .modal-content .modal-body .file-input-wrap label span {
@@ -5426,7 +5430,7 @@ a {
 	09.0 App Style
 ---------------------------------------------*/
 .app-download-bg {
-    background: url(assets/img/bg/app-bg.jpg) no-repeat left;
+    background: url(../images/bg/app-bg.jpg) no-repeat left;
     background-size: cover;
 }
 
@@ -5467,11 +5471,11 @@ a {
     }
 
 .app-download .app-download-button .apple-app:before {
-    content: url(assets/img/apple-white.png);
+    content: url(../images/apple-white.png);
 }
 
 .app-download .app-download-button .android-app:before {
-    content: url(assets/img/google-white.png);
+    content: url(../images/google-white.png);
 }
 
 /*---------------------------------------------
@@ -6020,7 +6024,7 @@ header {
 	13.0 Animated-number Style
 ---------------------------------------------*/
 .fact-bg {
-    background: url(assets/img/bg/fact-bg.jpg) no-repeat center center;
+    background: url(../images/bg/fact-bg.jpg) no-repeat center center;
     background-size: cover;
 }
 
@@ -6119,7 +6123,7 @@ header {
     }
 
 .call-to-action-bg {
-    background: url(assets/img/bg/cta-2-bg.jpg) no-repeat center;
+    background: url(../images/bg/cta-2-bg.jpg) no-repeat center;
     background-size: cover;
 }
 
@@ -6181,7 +6185,7 @@ header {
     }
 
 .newsletter-bg {
-    background: url(assets/img/bg/newsletter-bg.jpg) no-repeat center center;
+    background: url(../images/bg/newsletter-bg.jpg) no-repeat center center;
     background-size: cover;
 }
 
@@ -6558,7 +6562,7 @@ header {
             }
 
         .package-wrapper .package.professional .package-header {
-            background: url(assets/img/bg/package-header-bg.jpg) no-repeat center;
+            background: url(../images/bg/package-header-bg.jpg) no-repeat center;
             background-size: cover;
         }
 
@@ -6941,11 +6945,11 @@ header {
             }
 
         .footer-bottom .footer-app-download .apple-app:before {
-            content: url(assets/img/apple.png);
+            content: url(../images/apple.png);
         }
 
         .footer-bottom .footer-app-download .android-app:before {
-            content: url(assets/img/google.png);
+            content: url(../images/google.png);
         }
 
     .footer-bottom .back-to-top {
@@ -7489,7 +7493,7 @@ header {
 
 .about-company {
     padding: 60px 30px;
-    background: url(assets/img/bg/bg-map.jpg) no-repeat center;
+    background: url(../images/bg/bg-map.jpg) no-repeat center;
     background-size: cover;
 }
 
@@ -7592,7 +7596,7 @@ header {
 
     .working-process:before {
         position: absolute;
-        content: url(assets/img/dot.png);
+        content: url(../images/dot.png);
         top: 35px;
         left: 13px;
     }
@@ -9511,7 +9515,7 @@ header {
 	28.0 Account Style
 ---------------------------------------------*/
 .access-page-bg {
-    background: url("assets/img/bg/access-bg.jpg") no-repeat center;
+    background: url("../images/bg/access-bg.jpg") no-repeat center;
     background-size: cover;
 }
 
@@ -10274,6 +10278,7 @@ svg {
 
 .key-info {
     padding-right: 25px;
+
 {
     padding: 30px;
     padding-right: 0;
@@ -10288,6 +10293,7 @@ svg {
     margin-bottom: 30px;
     /* Set Scrollbar Width */
     &::-webkit-scrollbar
+
 {
     width: 10px;
     background: #f3f3f3;
@@ -10352,8 +10358,9 @@ li {
 }
 }
 
-.apply-popup{
+.apply-popup {
     .modal-dialog
+
 {
     margin: 20px auto;
     .modal-content
@@ -11759,5 +11766,3 @@ span + span {
 
 }
 }
-
- 
